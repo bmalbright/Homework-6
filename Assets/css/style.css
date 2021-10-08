@@ -1,0 +1,24 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: lemonchiffon;
+}
+
+.citySearch {
+    text-align: center;
+    background-color: aquamarine
+}
+
+.currentWeather {
+    text-align: ;
+    background-color: darksalmon;
+}
+
+.fiveDayForecast {
+    text-align: center;
+    background-color:greenyellow;
+}
+

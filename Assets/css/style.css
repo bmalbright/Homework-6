@@ -1,24 +1,39 @@
+/* #795199 darker purple*/
+/* #B06EE6 dark lavender*/
+/* #E6BA63 medium light brown*/
+/* #329975 darker green*/
+/* #3EE6AC lighter green*/
+
+
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E6BA63;
 }
 
-header {
+.jumbotron {
     text-align: center;
-    background-color: lemonchiffon;
+    background-color:  #B06EE6;
+    font-size: 25px;
+    border-radius: 25px;
+    margin: 10px;
+    color: white;
 }
 
 .citySearch {
     text-align: center;
-    background-color: aquamarine
+    background-color: #795199;
+    border-radius: 25px;
 }
 
 .currentWeather {
-    text-align: ;
-    background-color: darksalmon;
+    text-align: center;
+    background-color: #329975 ;
+    border-radius: 25px;
 }
 
 .fiveDayForecast {
     text-align: center;
-    background-color:greenyellow;
+    background-color:#3EE6AC;
+    border-radius: 25px;
 }
 

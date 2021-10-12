@@ -51,3 +51,7 @@ body {
     background-color: orangered;
     border-width: 2px;
 }
+
+h2 {
+    font-size: 35px;
+}

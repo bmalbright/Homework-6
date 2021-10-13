@@ -1,9 +1,3 @@
-/* #795199 darker purple*/
-/* #B06EE6 dark lavender*/
-/* #E6BA63 medium light brown*/
-/* #329975 darker green*/
-/* #3EE6AC lighter green*/
-
 
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,8 +6,8 @@ body {
 
 .jumbotron {
     text-align: center;
-    background-color:  lightseagreen;
-    font-size: 25px;
+    background-color:  #49E32D;
+    font-size: 40px;
     border-radius: 25px;
     margin: 10px;
     color: white;
@@ -27,7 +21,7 @@ body {
 
 .currentWeather {
     text-align: center;
-    background-color: #329975 ;
+    background-color: #C0FDFF ;
     border-radius: 25px;
 }
 

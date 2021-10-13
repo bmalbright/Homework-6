@@ -4,19 +4,16 @@ var saveBtn = document.querySelector(".saveBtn");
 var historyUl = document.querySelector(".history");
 var currentCity = document.createElement("h2");
 
-var currentDate = moment().format("MMMM Do YYYY");
+var currentDate = moment().format("ddd MMMM Do YYYY");
 console.log(currentDate);
 
 $(document).ready(function () {
-  // gettingCurrentWeather("Austin");
 
   saveBtn.addEventListener("click", function () {
     cityName = document.querySelector(".city").value;
     console.log(cityName);
 
-  
     cityHistory(cityName);
-
     gettingCurrentWeather(cityName);
   });
 
@@ -27,10 +24,10 @@ $(document).ready(function () {
     );
     $(".listCity").attr("type", "button");
   }
-  //historyUl.addEventListener("click", function () {
-  //cityName = document.querySelector(".listItem").value;
+
   $(".cityList").on("click", ".history", function () {
     gettingCurrentWeather($(this).text());
+
   });
 
   var weather = document.querySelector(".currentWeather");
@@ -39,12 +36,13 @@ $(document).ready(function () {
     var currentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     fetch(currentWeather).then(function (response) {
       $(".currentWeather").empty();
+      $(".fiveDayForecast").empty();
       currentCity.textContent = city;
       if (response.ok) {
         response.json().then(function (data) {
           console.log(data);
           var tempTag = document.createElement("p");
-          tempTag.textContent = "Temperature: " + data.main.temp;
+          tempTag.textContent = "Temperature: " + data.main.temp + " F";
           var humidityTag = document.createElement("p");
           humidityTag.textContent = "Humidity: " + data.main.humidity + "%";
           var windSpeedTag = document.createElement("p");
@@ -100,7 +98,7 @@ $(document).ready(function () {
             cardBody.setAttribute("class", "card-body");
 
             var dateEl = document.createElement("P");
-            dateEl.textContent = moment().add(i, "days").format("MM/DD/YYYY");
+            dateEl.textContent = moment().add(i, "days").format("ddd MM/DD/YYYY");
 
             var iconCode = element.weather[0].icon;
             var weatherIcon = document.createElement("img");

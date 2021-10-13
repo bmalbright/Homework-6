@@ -12,7 +12,7 @@ body {
 
 .jumbotron {
     text-align: center;
-    background-color:  #B06EE6;
+    background-color:  lightseagreen;
     font-size: 25px;
     border-radius: 25px;
     margin: 10px;
@@ -21,7 +21,7 @@ body {
 
 .citySearch {
     text-align: center;
-    background-color: #795199;
+    background-color: lemonchiffon;
     border-radius: 25px;
 }
 

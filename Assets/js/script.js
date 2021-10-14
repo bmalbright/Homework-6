@@ -3,12 +3,11 @@ var apiKey = "afd682401c0cee2cf220ad5a92b3a135";
 var saveBtn = document.querySelector(".saveBtn");
 var historyUl = document.querySelector(".history");
 var currentCity = document.createElement("h2");
-
+//gets current date from moment js to post to the current weather box.
 var currentDate = moment().format("ddd MMMM Do YYYY");
 console.log(currentDate);
 
 $(document).ready(function () {
-
   saveBtn.addEventListener("click", function () {
     cityName = document.querySelector(".city").value;
     console.log(cityName);
@@ -27,11 +26,10 @@ $(document).ready(function () {
 
   $(".cityList").on("click", ".history", function () {
     gettingCurrentWeather($(this).text());
-
   });
 
   var weather = document.querySelector(".currentWeather");
-
+  //API call for the current weather
   var gettingCurrentWeather = function (city) {
     var currentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     fetch(currentWeather).then(function (response) {
@@ -41,6 +39,7 @@ $(document).ready(function () {
       if (response.ok) {
         response.json().then(function (data) {
           console.log(data);
+          //gets all the date for the current weather
           var tempTag = document.createElement("p");
           tempTag.textContent = "Temperature: " + data.main.temp + " F";
           var humidityTag = document.createElement("p");
@@ -77,7 +76,7 @@ $(document).ready(function () {
           var slicedArray = data.daily.slice(0, 6);
 
           console.log(uvIndexTag);
-
+          // if statement to assign classes to the UV index to change the background color to signify low, moderate, or high Uv index.
           if (data.current.uvi < 3) {
             uvIndexTag.className = "low";
           } else if (data.current.uvi > 2 && data.current.uvi < 6) {
@@ -88,7 +87,7 @@ $(document).ready(function () {
 
           //this starts calling for the 5 day forecast
           var forecast = document.querySelector(".fiveDayForecast");
-
+          //for loop to distribute the 5 day forecast in different cards
           for (var i = 1; i < slicedArray.length; i++) {
             var element = slicedArray[i];
             console.log(element);
@@ -96,10 +95,12 @@ $(document).ready(function () {
             card.setAttribute("class", "card");
             var cardBody = document.createElement("div");
             cardBody.setAttribute("class", "card-body");
-
+            //puts dates on the cards in the 5 day forecast
             var dateEl = document.createElement("P");
-            dateEl.textContent = moment().add(i, "days").format("ddd MM/DD/YYYY");
-
+            dateEl.textContent = moment()
+              .add(i, "days")
+              .format("ddd MM/DD/YYYY");
+            //puts weather icons on the 5 day forecast
             var iconCode = element.weather[0].icon;
             var weatherIcon = document.createElement("img");
             var iconURL =
@@ -107,7 +108,7 @@ $(document).ready(function () {
             weatherIcon.setAttribute("src", iconURL);
 
             console.log(weatherIcon);
-
+            //data to be assigned the cards for the 5 day forecast
             var highTempTag = document.createElement("p");
             highTempTag.textContent =
               " High Temperature: " + element.temp.max + " F";
@@ -119,7 +120,7 @@ $(document).ready(function () {
               "Wind Speed: " + element.wind_speed + " MPH";
             var humidityTag = document.createElement("p");
             humidityTag.textContent = "Humidity: " + element.humidity + "%";
-
+            //appends the data to the 5 day forecast cards
             cardBody.append(
               dateEl,
               weatherIcon,

@@ -30,7 +30,7 @@ body {
     background-color:#3EE6AC;
     border-radius: 25px;
 }
-
+/* these three sections are to change the background of the uv index */
 .low {
     background-color: lightgreen;
     border-width: 2px;
@@ -45,7 +45,7 @@ body {
     background-color: orangered;
     border-width: 2px;
 }
-
+/* changes the font size of the day in the current weather box */
 h2 {
     font-size: 35px;
 }

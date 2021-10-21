@@ -139,3 +139,6 @@ $(document).ready(function () {
     });
   };
 });
+
+
+//this application works locally. adding a comment to see commits. 

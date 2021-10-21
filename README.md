@@ -9,6 +9,6 @@
 
 ### I got help from a number of people with this assignment, including my tutor Brian Ford, classmates including Jack Manzer, Ethan Cho, Mat Lundin, Phillip Welch, and a friend who is a bootcamp veteran. 
 
-### The site is deployed at https://bmalbright.github.io/homework-6/
+### The site is deployed at https://bmalbright.github.io/Homework-6/
 
 ![Homework 6 screenshot](homework6.png)

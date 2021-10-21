@@ -1,0 +1,54 @@
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #E6BA63;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color:  #49E32D;
+    font-size: 40px;
+    border-radius: 25px;
+    margin: 10px;
+    color: white;
+}
+
+.citySearch {
+    text-align: center;
+    background-color: lemonchiffon;
+    border-radius: 25px;
+}
+
+.currentWeather {
+    text-align: center;
+    background-color: #C0FDFF ;
+    border-radius: 25px;
+}
+
+.fiveDayForecast {
+    text-align: center;
+    background-color:#3EE6AC;
+    border-radius: 25px;
+}
+/* these three sections are to change the background of the uv index */
+.low {
+    background-color: lightgreen;
+    border-width: 2px;
+}
+
+.moderate {
+    background-color: yellow;
+    border-width: 2px;
+}
+
+.high {
+    background-color: orangered;
+    border-width: 2px;
+}
+/* changes the font size of the day in the current weather box */
+h2 {
+    font-size: 35px;
+}
+
+
+/* just adding a comment to make sure repo is up to date */
